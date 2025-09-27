@@ -73,9 +73,7 @@
 
   .hero-text {
     text-align: center;
-    /* centra el texto */
     align-items: center;
-    /* centra los elementos flex */
   }
 
   .hero-text h1,
@@ -83,7 +81,6 @@
   .hero-text .hero-title,
   .hero-text .hero-subtext {
     margin: 0 auto;
-    /* asegura que no queden márgenes a la izquierda */
   }
 
   .hero-text h1 {

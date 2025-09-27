@@ -35,7 +35,50 @@
   padding: var(--btn-padding-lg);
 }
 
+.btn-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: var(--weight-regular);
+  font-size: var(--btn-size-md);
+  transition: color var(--transition-speed) ease,
+              font-weight var(--transition-speed) ease;
+}
 
+.btn-link svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: block;
+  transition: transform var(--transition-speed) ease;
+}
+
+.btn-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;  width: 0;
+  height: 1px;
+  background: var(--primary-color);
+  transition: width var(--transition-speed) ease,
+              background-color var(--transition-speed) ease;
+}
+
+.btn-link:hover {
+  color: var(--primary-color-hover);
+}
+
+.btn-link:hover svg {
+  transform: translateX(4px);
+}
+
+.btn-link:hover::after {
+  width: 100%;
+  background: var(--primary-color-hover);
+}
 @media (max-width: 320px) {
 
   .btn-xs { font-size: var(--btn-size-xs-mobile); padding: var(--btn-padding-xs-mobile); }

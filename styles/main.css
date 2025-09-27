@@ -18,12 +18,20 @@
   --bg-color: #0B0B0B;
   --navbar-bg-color: #0B0B0B;
   --navbar-links-bg-color: #161616;
-  --color-link-active: blue;
+  --color-link-active: var(--primary-color-active);
+
+  --services-bgcolor: #161616;
+  --demo-bgcolor: #242424;
+  --contact-bgcolor: #101010;
+  --footer-bgcolor: #050505;
+
+
 
   /* ---------------- Fonts ---------------- */
   --font-title: 'Montserrat', sans-serif;
   --font-btn: 'Montserrat', sans-serif;
-  --font-base: 'Roboto', sans-serif;
+  --font-base: 'Lato', sans-serif;
+
 
   /* ---------------- Font Sizes ---------------- */
   --text-base-size: clamp(14px, 1vw, 16px);
@@ -49,8 +57,8 @@
 
   /* ---------------- Font Weights ---------------- */
   --weight-light: 250;
-  --weight-regular: 350;
-  --weight-medium: 400;
+  --weight-regular: 400;
+  --weight-medium: 450;
   --weight-semibold: 650;
   --weight-bold: 700;
 
@@ -194,6 +202,15 @@ li {
   margin-bottom: var(--list-item-margin-bottom, var(--spacing-sm));
 }
 
+.text-center{
+   text-align: center;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
 h1,
 h2,
 h3,
@@ -242,4 +259,8 @@ h6 {
   color: var(--text-color-dark);
   letter-spacing: var(--highlight-spacing);
   text-transform: var(--highlight-text-transform, uppercase);
+}
+
+.letter-spacing {
+   letter-spacing: 0.3em;
 }
