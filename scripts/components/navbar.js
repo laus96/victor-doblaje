@@ -21,6 +21,7 @@ $(document).ready(function () {
 let navToggle = document.querySelector('.nav-toggle')
 let bars = document.querySelectorAll('.bar')
 
-function toggleHamburger(e) {
+navToggle.addEventListener('click', () => {
   bars.forEach(bar => bar.classList.toggle('x'))
-}
+  navToggle.classList.toggle('open');
+})

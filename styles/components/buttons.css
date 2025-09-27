@@ -1,8 +1,8 @@
-.btn {
+
+.btn { 
   font-family: var(--font-btn);
   font-weight: var(--weight-medium);
   border-radius: var(--border-radius);
-  font-size: var(--btn-size);
   letter-spacing: var(--highlight-spacing);
   cursor: pointer;
   text-decoration: none;
@@ -10,28 +10,76 @@
   align-items: center;
   justify-content: center;
   transition: all var(--transition-speed) ease;
-  padding: var(--spacing-sm) var(--spacing-md);
-  height: 100%;
+  height: auto;
   position: relative;
   z-index: 2;
 }
 
+.btn-xs {
+  font-size: var(--btn-size-xs);
+  padding: var(--btn-padding-xs);
+}
+
+.btn-sm {
+  font-size: var(--btn-size-sm);
+  padding: var(--btn-padding-sm);
+}
+
+.btn-md {
+  font-size: var(--btn-size-md);
+  padding: var(--btn-padding-md);
+}
+
+.btn-lg {
+  font-size: var(--btn-size-lg);
+  padding: var(--btn-padding-lg);
+}
+
+
+@media (max-width: 320px) {
+
+  .btn-xs { font-size: var(--btn-size-xs-mobile); padding: var(--btn-padding-xs-mobile); }
+  .btn-sm { font-size: var(--btn-size-sm-mobile); padding: var(--btn-padding-sm-mobile); }
+  .btn-md { font-size: var(--btn-size-md-mobile); padding: var(--btn-padding-md-mobile); }
+  .btn-lg { font-size: var(--btn-size-lg-mobile); padding: var(--btn-padding-lg-mobile); }
+
+}
+
+@media (min-width: 321px) and (max-width: 768px) { 
+
+  .btn-xs { font-size: var(--btn-size-xs); padding: var(--btn-padding-xs); }
+  .btn-sm { font-size: var(--btn-size-sm); padding: var(--btn-padding-sm); }
+  .btn-md { font-size: var(--btn-size-md); padding: var(--btn-padding-md); }
+  .btn-lg { font-size: var(--btn-size-lg); padding: var(--btn-padding-lg); }
+
+}
+
+@media (min-width: 769px) { 
+  
+  .btn-xs { font-size: var(--btn-size-xs); padding: var(--btn-padding-xs); }
+  .btn-sm { font-size: var(--btn-size-sm); padding: var(--btn-padding-sm); }
+  .btn-md { font-size: var(--btn-size-md); padding: var(--btn-padding-md); }
+  .btn-lg { font-size: var(--btn-size-lg); padding: var(--btn-padding-lg); }
+
+}
 
 .btn-primary {
   background-color: var(--primary-color);
   color: var(--text-color-light);
+  border: 2px solid var(--primary-color);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-color-hover);
+  border: 2px solid var(--primary-color-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow);
   color: var(--text-color-light);
 }
 
-
 .btn-primary:active {
   background-color: var(--primary-color-active);
+  border: 2px solid var(--primary-color-active);
   transform: translateY(0);
   box-shadow: none;
 }
@@ -43,7 +91,8 @@
 }
 
 .btn-outline:hover {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-hover);
+  border: 2px solid var(--primary-color-hover);
   color: var(--text-color-light);
   transform: translateY(-2px);
 }
@@ -51,19 +100,18 @@
 .btn-outline:active {
   background-color: var(--primary-color-active);
   border-color: var(--primary-color-active);
+
   color: var(--text-color-light);
   transform: translateY(0);
 }
 
 .btn-nav {
-  font-family: var(--font-base);
   color: var(--text-color-light);
   text-decoration: none;
   padding: var(--spacing-sm) var(--spacing-lg);
-  transition: all 0.5s;
+  transition: all var(--transition-speed) ease;
   position: relative;
   z-index: 1;
-  transition: all var(--transition-speed) ease;
 }
 
 .btn-nav:hover {
@@ -72,14 +120,12 @@
 }
 
 .btn-cta {
-  font-family: var(--font-base);
   border: 0.5px solid var(--primary-color);
   text-decoration: none;
   padding: var(--spacing-sm) var(--spacing-lg);
-  transition: all 0.5s;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
   position: relative;
   z-index: 1;
-  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 .btn-cta:before,
@@ -96,17 +142,21 @@
   right: 0;
   left: 0;
 }
+
 .btn-cta.middle-up-down-in:before {
   top: 0;
   bottom: 100%;
 }
+
 .btn-cta.middle-up-down-in:after {
   top: 100%;
   bottom: 0;
 }
+
 .btn-cta.middle-up-down-in:hover:before {
   bottom: 50%;
 }
+
 .btn-cta.middle-up-down-in:hover:after {
   top: 50%;
 }
@@ -124,7 +174,7 @@
   height: 0.5px;
   bottom: 0;
   left: 0;
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
   transition: transform var(--transition-speed) ease-out;
 }
 
