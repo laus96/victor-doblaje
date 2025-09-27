@@ -62,10 +62,11 @@
 }
 
 @media (max-width: 768px) {
-  .hero{
+  .hero {
     padding: var(--navbar-height) var(--section-padding) 0 var(--section-padding);
     background-size: 120% auto;
   }
+
   .hero-container {
     grid-template-columns: 1fr;
     height: 100%;

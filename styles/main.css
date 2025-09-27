@@ -42,7 +42,7 @@
   --h4-size: 1.5rem;
   --h5-size: 1.25rem;
   --h6-size: 1rem;
-  --footer-size:0.85em;
+  --footer-size: 0.85em;
 
 
   --btn-size-xs: 0.75rem;
@@ -158,16 +158,16 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: 
-    color var(--transition-speed) ease, 
+  transition:
+    color var(--transition-speed) ease,
     background-color var(--transition-speed) ease;
 }
 
 a {
   color: var(--color-link);
   text-decoration: none;
-  transition: 
-    color var(--transition-speed) ease, 
+  transition:
+    color var(--transition-speed) ease,
     transform var(--transition-speed) ease;
   letter-spacing: var(--link-spacing, 0.02em);
 }
@@ -202,8 +202,8 @@ li {
   margin-bottom: var(--list-item-margin-bottom, var(--spacing-sm));
 }
 
-.text-center{
-   text-align: center;
+.text-center {
+  text-align: center;
 }
 
 .icon {
@@ -262,5 +262,5 @@ h6 {
 }
 
 .letter-spacing {
-   letter-spacing: 0.3em;
+  letter-spacing: 0.3em;
 }

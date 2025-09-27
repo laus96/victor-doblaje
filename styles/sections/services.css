@@ -12,7 +12,7 @@
 }
 
 .services-container {
-  display: flex; 
+  display: flex;
   gap: var(--spacing-lg);
   justify-content: center;
   padding: var(--section-padding) 0;
@@ -59,7 +59,7 @@
 
 @media (max-width: 768px) {
 
-   .services-container {
+  .services-container {
     flex-direction: column;
     width: 100%;
     align-items: center;
@@ -71,5 +71,5 @@
 .service-item-title {
   text-transform: var(--highlight-text-transform, uppercase);
   color: var(--text-color);
-   align-items: center; 
+  align-items: center;
 }
