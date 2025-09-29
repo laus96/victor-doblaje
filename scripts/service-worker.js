@@ -1,5 +1,5 @@
 const CACHE_NAME = "victor-doblaje-cache-v1";
-const URLS_TO_CACHE = ["/", "/index.html", "/styles/main.css", "/scripts/main.js"];
+const URLS_TO_CACHE = ["/", "index.html", "styles/main.css", "scripts/main.js"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
