@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="es">
-
+<!-- https://responsivetesttool.com/ -->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -14,11 +14,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/components/buttons.css">
-  <link rel="stylesheet" href="styles/components/navbar.css">
-  <link rel="stylesheet" href="styles/sections/hero.css">
-  <link rel="stylesheet" href="styles/sections/services.css">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/animations/animations.css">
+  <link rel="stylesheet" href="/styles/components/buttons.css">
+  <link rel="stylesheet" href="/styles/components/navbar.css">
+  <link rel="stylesheet" href="/styles/sections/hero.css">
+  <link rel="stylesheet" href="/styles/sections/services.css">
+  <link rel="stylesheet" href="/styles/sections/demos.css">
+
 
   <!-- TODO: Change when we have a domain -->
   <link rel="canonical" href="https://www.victormoreiradoblaje.com/" />
@@ -121,101 +124,40 @@
   <main>
 
     <section class="hero" id="hero">
-      <div class="hero-container">
-        <div class="hero-text">
-          <h6 class="hero-name">Víctor Moreira</h6>
-          <h1 class="hero-title">Actor de <span class="highlight">doblaje</span><br /> & Editor de <span
-              class="highlight">vídeo</span></h1>
-          <!-- TODO: Placeholder text, change when we have it-->
-          <p class="hero-subtext">Voces con carácter y edición con acabado profesional para cine, televisión y medios
-            digitales. Entregas en WAV/MP3 y masters para broadcast</p>
-          <div class="hero-buttons">
-            <a href="#Demos" class="btn btn-md btn-primary">Ver Demos</a>
-            <a href="/Doblaje" class="btn btn-md btn-outline">Más sobre Doblaje</a>
-            <a href="/Edicion" class="btn btn-md btn-outline">Más sobre Edición</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="assets/victor_hero.jpg" alt="Víctor Moreira, actor de doblaje y editor de vídeo." />
-        </div>
-      </div>
+      
     </section>
 
     <section id="services" class="services">
-      <h3 class="services-title text-center">Servicios de <span class="highlight">voz y edición</span> Profesional</h3>
-      <h6 class="services-subtitle text-center">Doblaje, locución y edición de vídeo adaptados a cada proyecto y
-        plataforma.</h6>
-      <div class="services-container">
-        <div class="service-item">
-          <div class="text-center">
-            <i data-lucide="mic-vocal" class="icon"></i>
-          </div>
-          <div class="text-center letter-spacing">
-            <h4 class="service-item-title">Doblaje</h4>
-          </div>
-          <div class="service-text">
-            <p class="service-item-description">Voz para publicidad, series, animación y videojuegos. Grabaciones en
-              estudio o remoto.</p>
-          </div>
-          <div>
-            <a href="/Doblaje" class="btn-link">
-              Ver servicios de Voz <i data-lucide="move-right"></i>
-            </a>
-          </div>
-
-        </div>
-        <div class="service-item">
-          <div class="text-center">
-            <i data-lucide="clapperboard" class="icon"></i>
-          </div>
-          <div class="text-center letter-spacing">
-            <h4 class="service-item-title">Vídeo</h4>
-          </div>
-          <div class="service-text">
-            <p class="service-item-description">Montaje, corrección de color, VFX básicos y entrega en formatos para
-              broadcast y redes.</p>
-          </div>
-          <div>
-            <a href="/Edicion" class="btn-link">
-              Ver servicios de Vídeo <i data-lucide="move-right"></i>
-            </a>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="text-center">
-            <i data-lucide="monitor-play" class="icon"></i>
-          </div>
-          <div class="text-center letter-spacing">
-            <h4 class="service-item-title">Producción</h4>
-          </div>
-          <div class="service-text">
-            <p class="service-item-description">Combinación profesional de voz y video para crear proyectos completos
-              listo para publicar.</p>
-          </div>
-          <div>
-            <a href="/Doblaje" class="btn-link">
-              Ver servicios de Produccón <i data-lucide="move-right"></i>
-            </a>
-          </div>
-        </div>
+     
     </section>
 
-    <section id="edicion">
+    <section id="demos" class="demos">
+     
     </section>
 
     <section id="portfolio">
+
     </section>
 
     <section id="contacto">
     </section>
+   <div class="floating-btn-wrapper">
+  <div class="tooltip-popover">
+    <span>¿Quieres hablar? Mándame un email</span>
+  </div>
+  <a href="/contacto" class="btn-float">
+    <i data-lucide="mail" class="icon-mail"></i>
+  </a>
+</div>
   </main>
-  <script src="scripts/jquery/jquery-3.7.1.min.js"></script>
+  <script src="/scripts/jquery/jquery-3.7.1.min.js"></script>
   <!-- DEV MODE -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
   <!-- PROD MODE
   <script src="https://unpkg.com/lucide@latest"></script> -->
-  <script src="scripts/main.js"></script>
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/index.js"></script>
 </body>
 
 </html>

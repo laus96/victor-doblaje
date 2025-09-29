@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: var(--navbar-height);
-  background-color: transparent;
+  background-color: #0a0a0a4d;
   display: flex;
   align-items: center;
   z-index: var(--navbar-z-index);

@@ -30,7 +30,7 @@
 .hero-name {
   font-weight: var(--weight-regular);
   font-size: var(--h5-size);
-  letter-spacing: 0.3em;
+  letter-spacing: var(--letter-spacing);
 }
 
 .hero-title {
