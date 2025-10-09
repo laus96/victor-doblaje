@@ -24,7 +24,6 @@
   overflow: visible;
 }
 
-/* Logo */
 .header-logo {
   display: flex;
   align-items: center;
@@ -35,7 +34,9 @@
 .header-logo__image {
   width: var(--navbar-logo-height);
   height: var(--navbar-logo-height);
-  background-image: url('/assets/images/icon.png');
+  background-image: url('/victor-doblaje/assets/images/icon.png');
+  /*LOCAL 
+  background-image: url('/assets/images/icon.png'); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

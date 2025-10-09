@@ -124,16 +124,26 @@
     display: flex;
   }
 
-  .services__item {
-    width: calc(100% - 2 * var(--gap-section));
-    max-width: 320px;
-    margin: 0 auto;
+.services__container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+.demos__container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+ .services__item {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .demos__item {
-    width: calc(100% - 2 * var(--gap-section));
-    max-width: 320px;
-    margin: 0 auto;
+  width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
 }
@@ -264,16 +274,26 @@
     display: flex;
   }
 
-  .services__item {
-    width: calc(100% - 2 * var(--gap-section));
-    max-width: 575px;
-    margin: 0 auto;
+.services__container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+.demos__container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+ .services__item {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .demos__item {
-    width: calc(100% - 2 * var(--gap-section));
-    max-width: 575px;
-    margin: 0 auto;
+  width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 }
 
@@ -403,16 +423,26 @@
     display: flex;
   }
 
-  .services__item {
-    width: calc(100% - 2 * var(--gap-section));
-    max-width: 767x;
-    margin: 0 auto;
+.services__container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+.demos__container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+ .services__item {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .demos__item {
-    width: calc(100% - 2 * var(--gap-section));
-    max-width: 767x;
-    margin: 0 auto;
+  width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 }
 
@@ -479,16 +509,26 @@
     display: flex;
   }
 
-  .services__item {
-    width: calc(100% - 2 * var(--gap-section));
-    max-width: 991px;
-    margin: 0 auto;
+.services__container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+.demos__container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+ .services__item {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .demos__item {
-    width: calc(100% - 2 * var(--gap-section));
-    max-width: 991px;
-    margin: 0 auto;
+  width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 }
 

@@ -41,9 +41,16 @@ $(function () {
   };
 
   [
+    { id: 'navbar', url: '/victor-doblaje/components/navbar.html', callback: initNavbar },
+    { id: 'hero', url: '/victor-doblaje/sections/landing/hero.html' },
+    { id: 'services', url: '/victor-doblaje/sections/landing/services.html' },
+    { id: 'demos', url: '/victor-doblaje/sections/landing/demos.html' },
+
+    /* Local
     { id: 'navbar', url: '/components/navbar.html', callback: initNavbar },
     { id: 'hero', url: '/sections/landing/hero.html' },
     { id: 'services', url: '/sections/landing/services.html' },
-    { id: 'demos', url: '/sections/landing/demos.html' },
+    { id: 'demos', url: '/sections/landing/demos.html' },*/
   ].forEach(c => loadComponent(c.id, c.url, c.callback));
 });
+
