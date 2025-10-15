@@ -1,48 +1,64 @@
-<h3 class="section__title">Muestras de <span class="text--highlight">trabajo</span></h3>
-<h6 class="section__subtitle">Doblaje, locución y edición de vídeo adaptados a cada proyecto y plataforma.</h6>
-
-  <div class="demos__container">
-    <div class="demos__item">
-      <div class="demos__header">
-        <div class="demos__header-top">
-          <i data-lucide="mic-vocal" class="demos__icon"></i>
-          <h4 class="demos__item-title">Reel de Doblaje</h4>
-        </div>
-        <div class="demos__header-bottom">
-          <p class="demos__item-description">
-            Combinación profesional de voz y video para crear proyectos completos listos para publicar.
-          </p>
-           <a href="/Edicion" class="button--link button--hover-underline">
-                Ver servicios de Voz <i data-lucide="move-right"></i>
-            </a>
-        </div>
-      </div>
-
-      <div class="demos__video">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/JN_lAfxlKqs" 
-                title="Video" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div class="demos__item">
-      <div class="demos__header">
-        <div class="demos__header-top">
-          <i data-lucide="monitor-play" class="demos__icon"></i>
-          <h4 class="demos__item-title">Reel de Edición</h4>
-        </div>
-        <div class="demos__header-bottom">
-          <p class="demos__item-description">
-            Combinación profesional de voz y video para crear proyectos completos listos para publicar.
-          </p>
-         <a href="/Edicion" class="button--link button--hover-underline">
-                Ver servicios de Vídeo <i data-lucide="move-right"></i>
-            </a>
-        </div>
-      </div>
-
-      <div class="demos__video">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/JN_lAfxlKqs" 
-                title="Video" frameborder="0" allowfullscreen></iframe>
-      </div>
+<h3 class="section__title">Explora las <span class="text--highlight">demo</span> de mi trabajo</h3>
+<h6 class="section__subtitle">
+  Descubre cómo puedo dar vida a tus proyectos con doblaje profesional y edición de vídeo. Cada demo refleja mi estilo,
+  versatilidad y atención al detalle.
+</h6>
+<div class="demos__container">
+  <div class="demos__header">
+    <div class="demos__tabs">
+      <button class="tab active" data-tab="all">Ver todo</button>
+      <button class="tab" data-tab="doblaje">Doblaje</button>
+      <button class="tab" data-tab="edicion">Edición</button>
     </div>
   </div>
+  <!-- GITHUB CHANGES-->
+
+  <div class="demos__grid">
+    <div class="demo-card" data-category="edicion">
+      <div class="demo-type-label">Edición</div>
+      <media-theme-yt style="width:100%">
+        <video slot="media" src="/victor-doblaje/assets/videos/dungeons.mp4" poster="/victor-doblaje/assets/images/mini-edicion.png"
+          playsinline></video>
+      </media-theme-yt>
+    </div>
+
+    <div class="demo-card" data-category="doblaje">
+      <div class="demo-type-label">Doblaje</div>
+      <media-theme-yt style="width:100%">
+        <video slot="media" src="/victor-doblaje/assets/videos/dungeons.mp4" poster="/victor-doblaje/assets/images/mini-doblaje.png"
+          playsinline></video>
+      </media-theme-yt>
+    </div>
+  </div>
+  <!--
+    <div class="demos__grid">
+    <div class="demo-card" data-category="edicion">
+      <div class="demo-type-label">Edición</div>
+      <media-theme-yt style="width:100%">
+        <video slot="media" src="/assets/videos/dungeons.mp4" poster="/assets/images/mini-edicion.png"
+          playsinline></video>
+      </media-theme-yt>
+    </div>
+
+    <div class="demo-card" data-category="doblaje">
+      <div class="demo-type-label">Doblaje</div>
+      <media-theme-yt style="width:100%">
+        <video slot="media" src="/assets/videos/dungeons.mp4" poster="/assets/images/mini-doblaje.png"
+          playsinline></video>
+      </media-theme-yt>
+    </div>
+
+  </div>
+  -->
+  <div class="demos-more__content">
+    <h5 class="demos-more__title">Explora más demos</h5>
+    <p class="demos-more__text">
+      Desde locuciones emotivas hasta vídeos editados profesionalmente, mis demos muestran la calidad y creatividad que
+      puedo aportar a tus proyectos
+    </p>
+    <div class="demos-more__buttons">
+      <a href="/demos/doblaje" class="button button--outline button--sm">Ver más de doblaje</a>
+      <a href="/demos/video" class="button button--outline button--sm">Ver más de vídeo</a>
+    </div>
+  </div>
+</div>

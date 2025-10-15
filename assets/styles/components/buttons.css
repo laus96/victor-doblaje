@@ -30,8 +30,8 @@
 }
 
 .button--link svg {
-  width: var(--icon-sm);
-  height: var(--icon-sm);
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
   transition: transform var(--transition-speed) var(--transition-ease);
 }
 
@@ -156,8 +156,8 @@
 }
 
 .button--float {
-  width: var(--icon-xxl);
-  height: var(--icon-xxl);
+  width: var(--icon-size-xxl);
+  height: var(--icon-size-xxl);
   border-radius: 50%;
   background-color: var(--primary-color);
   display: flex;
@@ -176,14 +176,15 @@
 }
 
 .button--float svg {
-  width: var(--icon-md);
-  height: var(--icon-md);
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
 }
 
 .button--float__container:hover .tooltip__box {
   opacity: 1;
   visibility: visible;
 }
+
 .button--float__container {
   position: fixed;
   bottom: 1.25rem;
@@ -192,8 +193,8 @@
 }
 
 .icon-mail {
-  width: var(--icon-md);
-  height: var(--icon-md);
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
   color: var(--text-color-light);
 }
 
@@ -211,4 +212,21 @@
 
 .button--link.button--hover-underline:hover::after {
   transform: scaleX(1);
+}
+
+.button--sm {
+  font-size: var(--btn-font-size-sm);
+  padding: var(--btn-padding-y-sm) var(--btn-padding-x-sm);
+}
+
+.button--lg {
+  font-size: var(--btn-font-size-lg);
+  padding: var(--btn-padding-y-lg) var(--btn-padding-x-lg);
+  border-radius: var(--btn-radius-lg);
+}
+
+.button--xl {
+  font-size: var(--btn-font-size-xl);
+  padding: var(--btn-padding-y-xl) var(--btn-padding-x-xl);
+  border-radius: var(--btn-radius-xl);
 }

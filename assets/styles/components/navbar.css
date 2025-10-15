@@ -11,7 +11,7 @@
   padding: var(--navbar-padding-y) var(--navbar-padding-x);
   box-sizing: border-box;
   backdrop-filter: blur(var(--navbar-backdrop-blur));
-  box-shadow: var(--navbar-shadow);
+  box-shadow: var(--shadow);
 }
 
 .navbar__container {
@@ -34,9 +34,9 @@
 .header-logo__image {
   width: var(--navbar-logo-height);
   height: var(--navbar-logo-height);
-  background-image: url('/victor-doblaje/assets/images/icon.png');
-  /*LOCAL 
-  background-image: url('/assets/images/icon.png'); */
+  /*GITHUB CHANGES*/
+  /*background-image: url('/assets/images/icon.png'); */
+  background-image: url('/victor-doblaje/assets/images/icon.png'); 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
