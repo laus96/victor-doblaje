@@ -12,11 +12,17 @@ $(function () {
     const cards = document.querySelectorAll(".demo-card");
     const grid = document.querySelector('.demos__grid');
 
+    // Inicializa todos los players de Plyr
+    const players = Array.from(document.querySelectorAll('.plyr-player')).map(video => {
+      return new Plyr(video, {
+        controls: ['play', 'progress', 'mute', 'volume', 'fullscreen'],
+        disableContextMenu: true // evita clic derecho
+      });
+    });
+
     const updateDemoGridLayout = () => {
       const visibleCards = Array.from(cards).filter(c => c.style.display !== 'none');
-
       grid.classList.remove('one-demo', 'two-demos', 'single-demo');
-
       if (visibleCards.length === 1) {
         grid.classList.add('single-demo');
       } else if (visibleCards.length === 2) {
@@ -26,6 +32,7 @@ $(function () {
       }
     };
 
+    // Tabs: filtra demos por categoría
     tabs.forEach(tab => {
       tab.addEventListener("click", () => {
         tabs.forEach(t => t.classList.remove("active"));
@@ -39,13 +46,8 @@ $(function () {
               : "none";
         });
 
-        const demoCards = document.querySelectorAll('.demo-card media-theme-yt');
-        demoCards.forEach(demo => {
-          const video = demo.querySelector('video');
-          video.pause();
-          const label = demo.closest('.demo-card').querySelector('.demo-type-label');
-          if (label) label.classList.remove('hidden');
-        });
+        // Pausar todos los videos al cambiar de pestaña
+        players.forEach(player => player.pause());
 
         updateDemoGridLayout();
       });
@@ -53,24 +55,10 @@ $(function () {
 
     updateDemoGridLayout();
 
-    const demoCards = document.querySelectorAll('.demo-card media-theme-yt');
-    demoCards.forEach(demo => {
-      const video = demo.querySelector('video');
-      const label = demo.closest('.demo-card').querySelector('.demo-type-label');
-
-      video.addEventListener('play', () => {
-        demoCards.forEach(other => {
-          if (other !== demo) {
-            other.querySelector('video').pause();
-            const otherLabel = other.closest('.demo-card').querySelector('.demo-type-label');
-            if (otherLabel) otherLabel.classList.remove('hidden');
-          }
-        });
-        if (label) label.classList.add('hidden');
-      });
-
-      video.addEventListener('pause', () => {
-        if (label) label.classList.remove('hidden');
+    // Solo controlar que se pause un video al reproducir otro
+    players.forEach(player => {
+      player.on('play', () => {
+        players.forEach(p => { if (p !== player) p.pause(); });
       });
     });
   };
@@ -95,30 +83,39 @@ $(function () {
     $toggle.on('click', e => { e.preventDefault(); toggleNavbar(); });
     $links.on('click', 'a', () => { if ($(window).width() <= 768) toggleNavbar(); });
     $(document).on('click.navbarOutside', e => {
-      if (!$toggle.is(e.target) && $toggle.has(e.target).length === 0 &&
-        !$links.is(e.target) && $links.has(e.target).length === 0 &&
-        $links.hasClass('navbar__links--active')) toggleNavbar();
+      if (
+        !$toggle.is(e.target) &&
+        $toggle.has(e.target).length === 0 &&
+        !$links.is(e.target) &&
+        $links.has(e.target).length === 0 &&
+        $links.hasClass('navbar__links--active')
+      ) toggleNavbar();
     });
     $(window).on('resize.navbarResize', () => {
       if ($(window).width() > 768 && $links.hasClass('navbar__links--active')) toggleNavbar();
     });
   };
-/*GITHUB CHANGES*/
-  /*[
+const initFooter = () => {
+  const yearSpan = document.getElementById("current-year");
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+};
+
+  /*GITHUB CHANGES*/
+  [
     { id: 'navbar', url: '/components/navbar.html', callback: initNavbar },
-    { id: 'footer', url: '/components/footer.html' },
+    { id: 'footer', url: '/components/footer.html', callback: initFooter },
     { id: 'hero', url: '/sections/landing/hero.html' },
     { id: 'services', url: '/sections/landing/services.html' },
     { id: 'demos', url: '/sections/landing/demos.html', callback: initDemos },
     { id: 'contact', url: '/sections/landing/contact.html' },
-  ].forEach(c => loadComponent(c.id, c.url, c.callback));*/
-  [
+  ].forEach(c => loadComponent(c.id, c.url, c.callback));
+  /*[
     { id: 'navbar', url: '/victor-doblaje/components/navbar.html', callback: initNavbar },
     { id: 'footer', url: '/victor-doblaje/components/footer.html' },
     { id: 'hero', url: '/victor-doblaje/sections/landing/hero.html' },
     { id: 'services', url: '/victor-doblaje/sections/landing/services.html' },
     { id: 'demos', url: '/victor-doblaje/sections/landing/demos.html', callback: initDemos },
     { id: 'contact', url: '/victor-doblaje/sections/landing/contact.html' },
-  ].forEach(c => loadComponent(c.id, c.url, c.callback));
+  ].forEach(c => loadComponent(c.id, c.url, c.callback));*/
 
 });

@@ -38,8 +38,7 @@
   width: 42px;
   height: 42px;
   /*GITHUB CHANGES*/
-  /*background: url('/assets/images/icon.png') center/contain no-repeat;*/
-  background: url('/victor-doblaje/assets/images/icon.png') center/contain no-repeat;
+  background: url('/assets/images/icon.png') center/contain no-repeat;
   filter: brightness(1.1);
   flex-shrink: 0;
 }
@@ -128,4 +127,24 @@
   color: var(--text-color-muted);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 1.5rem;
+}
+/* Footer Legal Links */
+.footer__legal-links {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-color-muted);
+  line-height: 1.5;
+}
+
+.footer__legal-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color var(--transition-speed) var(--transition-ease);
+}
+
+.footer__legal-links a:hover {
+  color: var(--primary-color-hover);
+  text-decoration: underline;
 }

@@ -1,0 +1,97 @@
+/* Aviso Legal - Profesional y sobrio */
+.legal {
+  position: relative;
+  margin-top: var(--navbar-height);
+  min-height: 100vh;
+  padding: var(--gap-lg) var(--padding-x);
+  background-color: var(--bg-color);
+  color: var(--text-color-light);
+  font-family: var(--font-base);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.legal__container {
+  width: 100%;
+  max-width: var(--container-max-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+  padding: var(--gap-lg) 0;
+  box-sizing: border-box;
+}
+
+/* Títulos principales */
+.legal h1 {
+  font-family: var(--font-title);
+  font-weight: var(--weight-bold);
+  font-size: var(--font-size-h1);
+  color: var(--primary-color);
+  margin-bottom: var(--gap-md);
+  letter-spacing: var(--title-spacing);
+  text-align: center;
+}
+
+/* Subtítulos / secciones */
+.legal h2 {
+  font-family: var(--font-title);
+  font-weight: var(--weight-semibold);
+  font-size: var(--h2-size);
+  color: var(--primary-color-hover);
+  margin-bottom: var(--gap-sm);
+  border-left: 3px solid var(--primary-color);
+  padding-left: var(--gap-sm);
+  margin-top: var(--gap-lg);
+}
+
+/* Texto de párrafo */
+.legal p {
+  font-size: var(--text-base-size);
+  line-height: 1.8;
+  color: var(--text-color-muted);
+  margin-bottom: var(--gap-md);
+  text-align: justify;
+}
+
+/* Links */
+.legal a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: color var(--transition-speed) var(--transition-ease);
+}
+
+.legal a:hover {
+  color: var(--primary-color-hover);
+  text-decoration: none;
+}
+
+/* Footer de aviso */
+.legal footer {
+  margin-top: var(--gap-lg);
+  font-size: var(--footer-text-small);
+  color: var(--text-color-muted);
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: var(--gap-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .legal {
+    padding: var(--gap-md) var(--padding-sm);
+  }
+
+  .legal h1 {
+    font-size: 1.8rem;
+  }
+
+  .legal h2 {
+    font-size: 1.4rem;
+  }
+
+  .legal p {
+    font-size: 0.95rem;
+  }
+}
