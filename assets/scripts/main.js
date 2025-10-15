@@ -12,11 +12,10 @@ $(function () {
     const cards = document.querySelectorAll(".demo-card");
     const grid = document.querySelector('.demos__grid');
 
-    // Inicializa todos los players de Plyr
     const players = Array.from(document.querySelectorAll('.plyr-player')).map(video => {
       return new Plyr(video, {
         controls: ['play', 'progress', 'mute', 'volume', 'fullscreen'],
-        disableContextMenu: true // evita clic derecho
+        disableContextMenu: true
       });
     });
 
@@ -32,7 +31,6 @@ $(function () {
       }
     };
 
-    // Tabs: filtra demos por categoría
     tabs.forEach(tab => {
       tab.addEventListener("click", () => {
         tabs.forEach(t => t.classList.remove("active"));
@@ -46,7 +44,6 @@ $(function () {
               : "none";
         });
 
-        // Pausar todos los videos al cambiar de pestaña
         players.forEach(player => player.pause());
 
         updateDemoGridLayout();
@@ -55,7 +52,6 @@ $(function () {
 
     updateDemoGridLayout();
 
-    // Solo controlar que se pause un video al reproducir otro
     players.forEach(player => {
       player.on('play', () => {
         players.forEach(p => { if (p !== player) p.pause(); });
@@ -101,21 +97,21 @@ const initFooter = () => {
 };
 
   /*GITHUB CHANGES*/
-  [
+  /*[
     { id: 'navbar', url: '/components/navbar.html', callback: initNavbar },
     { id: 'footer', url: '/components/footer.html', callback: initFooter },
     { id: 'hero', url: '/sections/landing/hero.html' },
     { id: 'services', url: '/sections/landing/services.html' },
     { id: 'demos', url: '/sections/landing/demos.html', callback: initDemos },
     { id: 'contact', url: '/sections/landing/contact.html' },
-  ].forEach(c => loadComponent(c.id, c.url, c.callback));
-  /*[
+  ].forEach(c => loadComponent(c.id, c.url, c.callback));*/
+  [
     { id: 'navbar', url: '/victor-doblaje/components/navbar.html', callback: initNavbar },
     { id: 'footer', url: '/victor-doblaje/components/footer.html' },
     { id: 'hero', url: '/victor-doblaje/sections/landing/hero.html' },
     { id: 'services', url: '/victor-doblaje/sections/landing/services.html' },
     { id: 'demos', url: '/victor-doblaje/sections/landing/demos.html', callback: initDemos },
     { id: 'contact', url: '/victor-doblaje/sections/landing/contact.html' },
-  ].forEach(c => loadComponent(c.id, c.url, c.callback));*/
+  ].forEach(c => loadComponent(c.id, c.url, c.callback));
 
 });

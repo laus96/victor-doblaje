@@ -16,11 +16,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /*GITHUB CHANGES*/
   background: linear-gradient(var(--demo-bg-overlay), var(--demo-bg-overlay)),
-    url('/assets/images/demo_bg.jpg') center/cover no-repeat;
-  /*background: linear-gradient(var(--demo-bg-overlay), var(--demo-bg-overlay)),
-    url('/victor-doblaje/assets/images/demo_bg.jpg') center/cover no-repeat;*/
+    url('assets/images/demo_bg.jpg') center/cover no-repeat;
   filter: var(--demo-bg-filter);
   opacity: 0.6;
   z-index: 0;
@@ -115,17 +112,16 @@
   border-radius: var(--border-radius);
 }
 
-/* Estilos del reproductor Plyr */
+
 .plyr--video {
   border-radius: var(--border-radius);
   overflow: hidden;
 }
 
 .plyr__control[aria-label="Download"] {
-  display: none !important; /* oculta botón descarga */
+  display: none !important;
 }
 
-/* Controla los colores para integrarlo con tu tema */
 .plyr--video .plyr__control {
   background: var(--demo-tab-bg);
   color: var(--text-color-light);

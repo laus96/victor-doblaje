@@ -37,8 +37,7 @@
 .footer__logo-image {
   width: 42px;
   height: 42px;
-  /*GITHUB CHANGES*/
-  background: url('/assets/images/icon.png') center/contain no-repeat;
+  background: url('assets/images/icon.png') center/contain no-repeat;
   filter: brightness(1.1);
   flex-shrink: 0;
 }
