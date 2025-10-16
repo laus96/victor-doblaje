@@ -57,6 +57,22 @@ $(function () {
         players.forEach(p => { if (p !== player) p.pause(); });
       });
     });
+    document.addEventListener("DOMContentLoaded", () => {
+      const lazySections = document.querySelectorAll(".lazy-bg");
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const bg = entry.target.getAttribute("data-bg");
+            entry.target.style.backgroundImage = `linear-gradient(var(--demo-bg-overlay), var(--demo-bg-overlay)), url('${bg}')`;
+            entry.target.classList.remove("lazy-bg");
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      lazySections.forEach(section => observer.observe(section));
+    });
   };
 
   const initNavbar = () => {
@@ -91,10 +107,10 @@ $(function () {
       if ($(window).width() > 768 && $links.hasClass('navbar__links--active')) toggleNavbar();
     });
   };
-const initFooter = () => {
-  const yearSpan = document.getElementById("current-year");
-  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-};
+  const initFooter = () => {
+    const yearSpan = document.getElementById("current-year");
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  };
 
   /*GITHUB CHANGES*/
   /*[

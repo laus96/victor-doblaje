@@ -4,7 +4,7 @@
   min-height: var(--hero-height-desktop);
   height: var(--hero-height-desktop);
   /*background: url('assets/images/hero_bg.png') repeat;*/
-  background: url('/victor-doblaje/assets/images/hero_bg.png') repeat;
+  background: url('/victor-doblaje/assets/images/hero_bg.webp') repeat;
   background-size: 135% auto;
   background-position: top left;
   overflow: hidden;
