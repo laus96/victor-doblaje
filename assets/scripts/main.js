@@ -7,7 +7,7 @@ $(function () {
     });
   };
 
-  const initDemos = () => {
+   const initDemos = () => {
     const tabs = document.querySelectorAll(".tab");
     const cards = document.querySelectorAll(".demo-card");
     const grid = document.querySelector('.demos__grid');
@@ -22,30 +22,20 @@ $(function () {
     const updateDemoGridLayout = () => {
       const visibleCards = Array.from(cards).filter(c => c.style.display !== 'none');
       grid.classList.remove('one-demo', 'two-demos', 'single-demo');
-      if (visibleCards.length === 1) {
-        grid.classList.add('single-demo');
-      } else if (visibleCards.length === 2) {
-        grid.classList.add('two-demos');
-      } else {
-        grid.classList.add('two-demos');
-      }
+      if (visibleCards.length === 1) grid.classList.add('single-demo');
+      else grid.classList.add('two-demos');
     };
 
     tabs.forEach(tab => {
       tab.addEventListener("click", () => {
         tabs.forEach(t => t.classList.remove("active"));
         tab.classList.add("active");
-
         const category = tab.dataset.tab;
         cards.forEach(card => {
           card.style.display =
-            category === "all" || card.dataset.category === category
-              ? "block"
-              : "none";
+            category === "all" || card.dataset.category === category ? "block" : "none";
         });
-
         players.forEach(player => player.pause());
-
         updateDemoGridLayout();
       });
     });
@@ -56,22 +46,6 @@ $(function () {
       player.on('play', () => {
         players.forEach(p => { if (p !== player) p.pause(); });
       });
-    });
-    document.addEventListener("DOMContentLoaded", () => {
-      const lazySections = document.querySelectorAll(".lazy-bg");
-
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const bg = entry.target.getAttribute("data-bg");
-            entry.target.style.backgroundImage = `linear-gradient(var(--demo-bg-overlay), var(--demo-bg-overlay)), url('${bg}')`;
-            entry.target.classList.remove("lazy-bg");
-            observer.unobserve(entry.target);
-          }
-        });
-      });
-
-      lazySections.forEach(section => observer.observe(section));
     });
   };
 
@@ -129,5 +103,24 @@ $(function () {
     { id: 'demos', url: '/victor-doblaje/sections/landing/demos.html', callback: initDemos },
     { id: 'contact', url: '/victor-doblaje/sections/landing/contact.html' },
   ].forEach(c => loadComponent(c.id, c.url, c.callback));
+
+   const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bg = entry.target.getAttribute("data-bg");
+        entry.target.style.backgroundImage = `linear-gradient(var(--demo-bg-overlay), var(--demo-bg-overlay)), url('${bg}')`;
+        entry.target.classList.remove("lazy-bg");
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  // ✅ Esto se ejecutará aunque las secciones se carguen después:
+  const watchLazySections = () => {
+    document.querySelectorAll(".lazy-bg").forEach(section => observer.observe(section));
+  };
+
+  // Espera un poco a que se carguen dinámicamente:
+  setTimeout(watchLazySections, 800);
 
 });
