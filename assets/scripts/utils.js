@@ -91,13 +91,12 @@ const initNavbar = () => {
     if ($(window).width() > 768 && $links.hasClass('navbar__links--active')) toggleNavbar();
   });
 
-  // 👇 Mueve aquí tu listener del logo
   const logo = document.getElementById("headerLogo");
   if (logo) {
     logo.addEventListener("click", () => {
-      window.location.href = "/";
+      //window.location.href = "/";
       // Para GitHub Pages:
-      // window.location.href = "/victor-doblaje/";
+      window.location.href = "/victor-doblaje/";
     });
   }
 };
