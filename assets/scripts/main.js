@@ -104,23 +104,6 @@ $(function () {
     { id: 'contact', url: '/victor-doblaje/sections/landing/contact.html' },
   ].forEach(c => loadComponent(c.id, c.url, c.callback));
 
-   const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const bg = entry.target.getAttribute("data-bg");
-        entry.target.style.backgroundImage = `linear-gradient(var(--demo-bg-overlay), var(--demo-bg-overlay)), url('${bg}')`;
-        entry.target.classList.remove("lazy-bg");
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  // ✅ Esto se ejecutará aunque las secciones se carguen después:
-  const watchLazySections = () => {
-    document.querySelectorAll(".lazy-bg").forEach(section => observer.observe(section));
-  };
-
-  // Espera un poco a que se carguen dinámicamente:
-  setTimeout(watchLazySections, 800);
+  
 
 });
