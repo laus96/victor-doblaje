@@ -1,6 +1,11 @@
 @media (max-width: 319.99px) {
   :root {
     --subtittle-padding: 0 1rem;
+    --play-button-icon: 54px;
+  }
+
+  .button--float__container {
+    display: block;
   }
 
   .hero {
@@ -201,13 +206,34 @@
     font-size: var(--font-size-xs);
     padding: 0.4rem 0.75rem;
   }
+.legal {
+    padding: var(--gap-md) var(--padding-sm);
+  }
 
+  .legal__title {
+    font-size: 1.8rem;
+  }
+
+  .legal__subtitle {
+    font-size: 1.4rem;
+    padding: 0 0.5em;
+  }
+
+  .legal p {
+    font-size: 0.95rem;
+    padding: 0 0.8em;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
 
   :root {
     --subtittle-padding: 0 1rem;
+    --play-button-icon: 54px;
+  }
+
+  .button--float__container {
+    display: block;
   }
 
   .hero {
@@ -397,7 +423,7 @@
 
 
   .demo-type-label {
-    font-size:  var(--font-size-md);
+    font-size: var(--font-size-md);
     padding: 0.2rem 0.5rem;
   }
 
@@ -407,14 +433,34 @@
   }
 
   .tab {
-    font-size:  var(--font-size-md);
+    font-size: var(--font-size-md);
     padding: 0.4rem 0.75rem;
   }
+  .legal {
+    padding: var(--gap-md) var(--padding-sm);
+  }
+
+  .legal__title {
+    font-size: 1.8rem;
+  }
+
+  .legal__subtitle {
+    font-size: 1.4rem;
+    padding: 0 0.5em;
+  }
+
+  .legal p {
+    font-size: 0.95rem;
+    padding: 0 0.8em;
+  }
+
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
 
-
+  .button--float__container {
+    display: block;
+  }
 
   .hero {
     height: auto !important;
@@ -605,7 +651,7 @@
   }
 
   .demo-type-label {
-    font-size:  var(--font-size-md);
+    font-size: var(--font-size-md);
     padding: 0.2rem 0.5rem;
   }
 
@@ -615,13 +661,32 @@
   }
 
   .tab {
-    font-size:  var(--font-size-md);
+    font-size: var(--font-size-md);
     padding: 0.4rem 0.75rem;
+  }
+  .legal {
+    padding: var(--gap-md) var(--padding-sm);
+  }
+
+  .legal__title {
+    font-size: 1.8rem;
+  }
+
+  .legal__subtitle {
+    font-size: 1.4rem;
+    padding: 0 0.5em;
+  }
+
+  .legal p {
+    font-size: 0.95rem;
+    padding: 0 0.8em;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-
+  .button--float__container {
+    display: block;
+  }
 
   .hero__buttons {
     order: 3;
@@ -704,7 +769,7 @@
   }
 
   .demo-type-label {
-    font-size:  var(--font-size-md);
+    font-size: var(--font-size-md);
     padding: 0.2rem 0.5rem;
   }
 
@@ -714,7 +779,7 @@
   }
 
   .tab {
-    font-size:  var(--font-size-md);
+    font-size: var(--font-size-md);
     padding: 0.4rem 0.75rem;
   }
 

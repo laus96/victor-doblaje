@@ -27,6 +27,7 @@
   --demos-bgcolor: #242424;
   --contact-bgcolor: #101010;
   --footer-bgcolor: #050505;
+  --legal-bgcolor: #161616;
 
   --success-color: #34D7A1;
   --warning-color: #FF8A3D;
@@ -133,7 +134,7 @@
   --navbar-height: 5rem;
   --navbar-logo-height: 3.4em;
   --navbar-logo-text-font: 1.6em;
-  --navbar-container-max-width: 81.25rem;
+  --navbar-container-max-width: 102.25rem;
   --navbar-padding-x: 2em;
   --navbar-padding-y: 3em;
   --navbar-links-gap-mobile: 3em;
@@ -195,6 +196,9 @@
   --icon-size-lg: 1.8rem;
   --icon-size-xl: 2.2rem;
   --icon-size-xxl: 2.5rem;
+
+  --play-button-icon:78px;
+  --button-float-icon:56px;
 
   --input-font-size-sm: 0.9rem;
   --input-font-size-md: 1rem;

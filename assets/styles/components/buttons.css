@@ -156,8 +156,8 @@
 }
 
 .button--float {
-  width: var(--icon-size-xxl);
-  height: var(--icon-size-xxl);
+  width: var(--button-float-icon);
+  height: var(--button-float-icon);
   border-radius: 50%;
   background-color: var(--primary-color);
   display: flex;
@@ -176,8 +176,8 @@
 }
 
 .button--float svg {
-  width: var(--icon-size-md);
-  height: var(--icon-size-md);
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
 }
 
 .button--float__container:hover .tooltip__box {
@@ -190,11 +190,12 @@
   bottom: 1.25rem;
   right: 1.25rem;
   z-index: var(--z-modal);
+  display: none;
 }
 
 .icon-mail {
-  width: var(--icon-size-md);
-  height: var(--icon-size-md);
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
   color: var(--text-color-light);
 }
 

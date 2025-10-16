@@ -3,8 +3,8 @@
   margin-top: var(--navbar-height);
   min-height: 100vh;
   padding: var(--gap-lg) var(--padding-x);
-  background-color: var(--bg-color);
-  color: var(--text-color-light);
+  background: url('/victor-doblaje/assets/images/hero_bg.webp') repeat;
+  /*background: url('/assets/images/hero_bg.webp') repeat;*/
   font-family: var(--font-base);
   display: flex;
   justify-content: center;
@@ -17,74 +17,38 @@
   max-width: var(--container-max-lg);
   display: flex;
   flex-direction: column;
-  gap: var(--gap-lg);
+  gap: var(--gap-sm);
   padding: var(--gap-lg) 0;
   box-sizing: border-box;
 }
 
-.legal h1 {
-  font-family: var(--font-title);
-  font-weight: var(--weight-bold);
-  font-size: var(--font-size-h1);
-  color: var(--primary-color);
-  margin-bottom: var(--gap-md);
-  letter-spacing: var(--title-spacing);
-  text-align: center;
+.legal__title {
+  text-align: justify;
+  margin-bottom: 0.5em;
+  padding: 0 0.1em;
 }
 
-.legal h2 {
-  font-family: var(--font-title);
-  font-weight: var(--weight-semibold);
-  font-size: var(--h2-size);
-  color: var(--primary-color-hover);
-  margin-bottom: var(--gap-sm);
-  border-left: 3px solid var(--primary-color);
-  padding-left: var(--gap-sm);
-  margin-top: var(--gap-lg);
+.legal__subtitle {
+  text-align: justify;
+  color: var(--text-color-muted);
+  font-weight: var(--weight-regular);
+  padding: 0 0.8em;
+  margin-top: 1em;
+  margin-bottom: 0.25em;
 }
 
 .legal p {
   font-size: var(--text-base-size);
   line-height: 1.8;
-  color: var(--text-color-muted);
+  color: var(--legal-subtext-color);
+  margin-top: 0;
   margin-bottom: var(--gap-md);
   text-align: justify;
+  padding: 0 1em;
 }
 
-.legal a {
-  color: var(--primary-color);
-  text-decoration: underline;
-  transition: color var(--transition-speed) var(--transition-ease);
-}
-
-.legal a:hover {
-  color: var(--primary-color-hover);
-  text-decoration: none;
-}
-
-.legal footer {
-  margin-top: var(--gap-lg);
-  font-size: var(--footer-text-small);
-  color: var(--text-color-muted);
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: var(--gap-sm);
-}
-
-@media (max-width: 768px) {
-  .legal {
-    padding: var(--gap-md) var(--padding-sm);
-  }
-
-  .legal h1 {
-    font-size: 1.8rem;
-  }
-
-  .legal h2 {
-    font-size: 1.4rem;
-  }
-
-  .legal p {
-    font-size: 0.95rem;
-  }
+.legal ul {
+  margin: 0.25em 0 0.75em 1.5em;
+  list-style: disc;
+  color: var(--legal-subtext-color);
 }

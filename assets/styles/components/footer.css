@@ -38,7 +38,7 @@
   width: 42px;
   height: 42px;
   background: url('/victor-doblaje/assets/images/icon.png') center/contain no-repeat;
-  /*background: url('assets/images/icon.png') center/contain no-repeat;*/
+  /*background: url('/assets/images/icon.png') center/contain no-repeat;*/
   filter: brightness(1.1);
   flex-shrink: 0;
 }
@@ -104,11 +104,23 @@
   transition: background-color var(--transition), transform var(--transition);
 }
 
+.footer__email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  background-color: var(--input-bg-color);
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--primary-color);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
 .footer__email a {
   color: var(--text-color-muted);
   text-decoration: none;
-  display: inline-block;
-  width: 100%;
   font-size: inherit;
 }
 
@@ -118,6 +130,22 @@
 }
 
 .footer__email:hover a {
+  color: var(--primary-color);
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color-muted);
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-left: 0.5rem;
+  transition: color var(--transition);
+}
+
+.copy-btn:hover {
   color: var(--primary-color);
 }
 

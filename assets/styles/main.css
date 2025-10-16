@@ -28,7 +28,7 @@ a {
               transform var(--transition-speed) var(--transition-ease);
 }
 
-a.email {
+a.link-cta {
   font-weight: var(--weight-semibold);
 }
 
@@ -68,6 +68,7 @@ ol {
 
 li {
   margin-bottom: var(--list-gap);
+  line-height: 1.8;
 }
 
 .text--center {
@@ -221,6 +222,27 @@ h6 {
 }
 
 
+#copy-modal {
+  position: fixed;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--border-radius);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+  white-space: nowrap;
+  display: none; /* oculto por defecto */
+}
+
+#copy-modal.show {
+  display: inline-block; /* se muestra al añadir .show */
+  opacity: 1;
+  pointer-events: auto;
+}
 /* Comentado: formulario genérico
 .form {
   display: flex;
